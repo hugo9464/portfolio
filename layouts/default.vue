@@ -2,10 +2,7 @@
   <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen" :class="theme">
     <header class="border-t-14 border-green-700">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
-        <div>
-          <nuxt-link v-if="theme === 'theme-light'" to="/"><img src="~/assets/img/nuxt-logo.svg" alt="logo" class="w-32" /></nuxt-link>
-          <nuxt-link v-else to="/"><img src="~/assets/img/nuxt-logo-white.svg" alt="logo" class="w-32" /></nuxt-link>
-        </div>
+        <div class="leading-tight text-4xl font-bold">Hugo Faye</div>
         <ul
           class="uppercase tracking-wide font-bold w-full block flex-grow lg:space-x-8 space-y-6 lg:space-y-0 lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
           :class="isOpen ? 'block': 'hidden'"
@@ -19,8 +16,8 @@
             <nuxt-link v-else to="/#projects" v-scroll-to="'/#projects'" class="text-copy-primary hover:text-gray-600">Projets</nuxt-link>
           </li>
           <li>
-            <a v-if="$route.path === '/'" href="/#about" v-scroll-to="'#about'" class="text-copy-primary hover:text-gray-600">À Propos</a>
-            <nuxt-link v-else to="/#about" v-scroll-to="'/#about'" class="text-copy-primary hover:text-gray-600">À Propos</nuxt-link>
+            <a v-if="$route.path === '/'" href="/#hobbies" v-scroll-to="'#hobbies'" class="text-copy-primary hover:text-gray-600">Loisirs</a>
+            <nuxt-link v-else to="/#hobbies" v-scroll-to="'/#hobbies'" class="text-copy-primary hover:text-gray-600">Loisirs</nuxt-link>
           </li>
           <li>
             <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="'#contact'" class="text-copy-primary hover:text-gray-600">Contact</a>
