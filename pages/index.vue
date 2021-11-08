@@ -109,7 +109,7 @@
                 class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
               />
               <div class="flex flex-col justify-center">
-                <h3>Testeur et automaticien</h3>
+                <h3>Testeur et Automaticien</h3>
                 <p class="text-base text-gray-600">
                   Septembre 2014 - Novembre 2017
                 </p>
@@ -210,6 +210,14 @@
               </div>
             </div>
           </li>
+          <li v-for="project of projects" :key="project.slug">
+          <NuxtLink :to="{ name: 'projects-slug', params: { slug: project.slug } }">
+            <div>
+              <h2>{{ project.title }}</h2>
+              <p>{{ project.description }}</p>
+            </div>
+          </NuxtLink>
+        </li>
         </ul>
       </div>
       <!-- end projects -->
@@ -241,7 +249,7 @@
       <!-- end get-to-know me -->
     </div>
 
-    <div class="overflow-x-hidden">
+    <!-- <div class="overflow-x-hidden">
       <div class="contact-me bg-background-secondary pt-16">
         <div class="container-inner mx-auto text-xl pb-4 relative">
           <h2 class="font-bold mb-6" id="contact">Me contacter :</h2>
@@ -257,7 +265,7 @@
           </p>
 
           <div class="text-lg sm:text-lg mb-16">
-            <form action="#" class="mb-12" data-netlify=true>
+            <form action="#" class="mb-12" method="POST" data-netlify=true>
               <div class="flex flex-wrap mb-6 -mx-4">
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">
@@ -364,10 +372,9 @@
           </div>
         </div>
       </div>
-      <!-- end contact-me -->
-    </div>
+    </div> -->
 
-    <div class="newsletter bg-background-tertiary">
+    <!-- <div class="newsletter bg-background-tertiary">
       <div class="container-inner mx-auto py-16 pb-8 text-center textl-xl">
         <h2 class="text-2xl font-bold mb-8">Join my Newsletter</h2>
 
@@ -517,12 +524,23 @@
           </g>
         </svg>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  async asyncData({ $content, params }) {
+    const projects = await $content("projects")
+      .only(["title", "description", "img", "slug"])
+      .sortBy("createdAt", "asc")
+      .fetch();
+
+    return {
+      projects,
+    };
+  },
+};
 </script>
 
 <style>
