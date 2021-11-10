@@ -1,6 +1,6 @@
 ---
 title: Zède
-description: This is the description for the article about all the things we know
+description: Design et développement d'une application pour le suivi de défis zéro déchet.
 img: valentine_background.png
 logo: react-native.svg
 alt: Projet Valentine H Despointes

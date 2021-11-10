@@ -1,9 +1,10 @@
 ---
-title: Valentine H Despointes
-description: Création d'un site e-commerce dédié à la vente d'articles de maroquinerie.
+title: Carrefour
+dates: Septembre 2014 - Novembre 2017
+description: Consultant Tests
 img: valentine_background.png
-logo: shopify.svg
-alt: Projet Valentine H Despointes
+logo: carrefour.svg
+alt: Page expèrience leboncoin
 author: 
   name: Choi
   bio: All about Choi and where he works and what he does

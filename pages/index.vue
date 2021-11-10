@@ -63,63 +63,25 @@
         <h2 class="font-bold mb-6" id="journey">Mon parcours :</h2>
 
         <ul class="text-lg sm:text-xl space-y-6">
-          <li>
-            <div class="flex">
-              <img
-                src="~assets/img/leboncoin.svg"
-                alt="mobile"
-                class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
-              />
-              <div class="flex flex-col justify-center">
-                <h3>QA Engineer</h3>
-                <p class="text-base text-gray-600">Janvier 2019 - Août 2021</p>
-                <div class="text-lg text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  ab nam animi iure nemo exercitationem a, eius non culpa
-                  itaque!
+          <li v-for="experience of experiences" :key="experience.slug">
+            <NuxtLink
+              :to="{ name: 'experiences-slug', params: { slug: experience.slug } }"
+            >
+              <div class="flex">
+                <img
+                  :src="`/images/${experience.logo}`"
+                  alt="mobile"
+                  class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
+                />
+                <div class="flex flex-col justify-center">
+                  <h3>{{ experience.title }}</h3>
+                  <h4 class="text-gray-600 text-base">{{ experience.dates }}</h4>
+                  <div class="text-lg text-gray-700">
+                    {{ experience.description }}
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="flex">
-              <img
-                src="~assets/img/oui_sncf.svg"
-                alt="mobile"
-                class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
-              />
-              <div class="flex flex-col justify-center">
-                <h3>Développeur Backend</h3>
-                <p class="text-base text-gray-600">
-                  Novembre 2017 - Décembre 2018
-                </p>
-                <div class="text-lg text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  ab nam animi iure nemo exercitationem a, eius non culpa
-                  itaque!
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="flex">
-              <img
-                src="~assets/img/carrefour.svg"
-                alt="mobile"
-                class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
-              />
-              <div class="flex flex-col justify-center">
-                <h3>Testeur et Automaticien</h3>
-                <p class="text-base text-gray-600">
-                  Septembre 2014 - Novembre 2017
-                </p>
-                <div class="text-lg text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                  ab nam animi iure nemo exercitationem a, eius non culpa
-                  itaque!
-                </div>
-              </div>
-            </div>
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -153,7 +115,7 @@
                 />
                 <div class="flex flex-col justify-center">
                   <h3>{{ project.title }}</h3>
-                  <div class="text-lg text-gray-600">
+                  <div class="text-lg text-gray-700">
                     {{ project.description }}
                   </div>
                 </div>
@@ -201,8 +163,14 @@ export default {
       .sortBy("createdAt", "asc")
       .fetch();
 
+    const experiences = await $content("experiences")
+      .only(["title", "description", "img", "slug", "logo", "dates"])
+      .sortBy("createdAt", "asc")
+      .fetch();
+
     return {
       projects,
+      experiences,
     };
   },
 };

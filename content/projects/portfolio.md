@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-description: Développement de mon portfolio personnel
+description: Développement de mon portfolio.
 img: valentine_background.png
 logo: nuxt.svg
 alt: Projet Valentine H Despointes

@@ -1,9 +1,10 @@
 ---
-title: Valentine H Despointes
-description: Création d'un site e-commerce dédié à la vente d'articles de maroquinerie.
+title: Oui.sncf
+dates: Novembre 2017 - Décembre 2018
+description: Développeur Backend
 img: valentine_background.png
-logo: shopify.svg
-alt: Projet Valentine H Despointes
+logo: oui_sncf.svg
+alt: Page expèrience leboncoin
 author: 
   name: Choi
   bio: All about Choi and where he works and what he does

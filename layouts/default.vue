@@ -21,10 +21,10 @@
             <a v-if="$route.path === '/'" href="/#hobbies" v-scroll-to="'#hobbies'" class="text-copy-primary hover:text-gray-600">Loisirs</a>
             <nuxt-link v-else to="/#hobbies" v-scroll-to="'/#hobbies'" class="text-copy-primary hover:text-gray-600">Loisirs</nuxt-link>
           </li>
-          <li>
+          <!-- <li>
             <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="'#contact'" class="text-copy-primary hover:text-gray-600">Contact</a>
             <nuxt-link v-else to="/#contact" v-scroll-to="'/#contact'" class="text-copy-primary hover:text-gray-600">Contact</nuxt-link>
-          </li>
+          </li> -->
           <!-- <li>
             <nuxt-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</nuxt-link>
           </li> -->
@@ -38,7 +38,7 @@
     <footer class="bg-green-700 text-white">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
-          <div>Copyright {{ new Date().getFullYear() }}. All rights reserved.</div>
+          <div>Copyright {{ new Date().getFullYear() }}. Tous droits réservés.</div>
         </div>
         <ul class="flex items-center space-x-8">
           <li>
