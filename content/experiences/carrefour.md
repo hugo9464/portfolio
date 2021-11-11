@@ -1,7 +1,7 @@
 ---
 title: Carrefour
 dates: Septembre 2014 - Novembre 2017
-description: Consultant Tests
+job: Consultant Tests
 img: valentine_background.png
 logo: carrefour.svg
 alt: Page expèrience leboncoin

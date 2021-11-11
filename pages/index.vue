@@ -77,7 +77,7 @@
                   <h3>{{ experience.title }}</h3>
                   <h4 class="text-gray-600 text-base">{{ experience.dates }}</h4>
                   <div class="text-lg text-gray-700">
-                    {{ experience.description }}
+                    {{ experience.job }}
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default {
       .fetch();
 
     const experiences = await $content("experiences")
-      .only(["title", "description", "img", "slug", "logo", "dates"])
+      .only(["title", "job", "img", "slug", "logo", "dates"])
       .sortBy("createdAt", "asc")
       .fetch();
 

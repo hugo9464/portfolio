@@ -1,20 +1,28 @@
 ---
 title: Leboncoin
 dates: Janvier 2019 - Août 2021
-description: QA Engineer
-img: valentine_background.png
+job: QA Engineer
 logo: leboncoin.svg
-alt: Page expèrience leboncoin
-author: 
-  name: Choi
-  bio: All about Choi and where he works and what he does
-  img: https://images.unsplash.com/photo-1534471770828-9bde524ee634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
-tags: 
-  - nuxtjs
-  - web development
+alt: Page expérience leboncoin
+stack: 
+  - Java
+  - Selenium / Appium
+  - ReactJS
+  - Cypress
+  - Docker
+  - Ansible
+  - ConcourseCI
+  - ZuulCI
+  - Jenkins
+  - Jira
+  - Confluence 
 ---
-## what do you know and what do we not know
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Au sein de l'équipe QA Engineer, j'ai participé à la création et la maintenance des tests end-to-end grâce principalement à selenium et appium et j'ai également activement participé à la mise en place d'une nouvelle stratégie QA visant à accompagner les équipes techniques à la mise en place de tests à tous les niveaux (unitaires, intégration, end-to-end) et dans toutes les stacks (android, ios, backend, web) :
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+J'ai eu l'occasion d'intervenir sur différents sujets :
+- Une IHM pour générer de la donnée (React.js + Backend Java)
+- Un banc de test de téléphone physique (Appium + STF + Jenkins + Selenium Grid)
+- Une infra de test permettant l'exécution et l'analyse des tests (Différentes APIs backend en Java qui orchestrent l'exécution des tests)
+- Une intégration à la CI leboncoin (API retournant le résultat des tests qui sont bloquants pour les MEP)
+- Le choix des technos et librairies pour la mise en place de tests dans les différentes stacks (android, ios, backend, frontend)

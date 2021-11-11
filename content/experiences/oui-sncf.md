@@ -1,7 +1,7 @@
 ---
 title: Oui.sncf
 dates: Novembre 2017 - Décembre 2018
-description: Développeur Backend
+job: Développeur Backend
 img: valentine_background.png
 logo: oui_sncf.svg
 alt: Page expèrience leboncoin
