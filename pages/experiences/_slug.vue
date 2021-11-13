@@ -2,19 +2,11 @@
   <article
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
-    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
-        :src="`/images/${experience.logo}`"
-        alt="mobile"
-        class="flex-no-shrink fill-current"
-      />
-      <div class="overlay"></div>
-    </div>
     <div
       class="
         relative
         xs:py-8 xs:px-8
-        lg:py-32 lg:px-16 lg:w-1/2
+        lg:px-16
         xs:w-full
         h-full
         overflow-y-scroll
@@ -23,11 +15,68 @@
         custom-scroll
       "
     >
-      <h1 class="text-3xl text-gray-700">{{ experience.job }}</h1>
-      <h4 class="text-gray-600 text-base mb-10">{{ experience.dates }}</h4>
-      <!-- content from markdown -->
-      <nuxt-content :document="experience" />
-      <!-- prevNext component -->
+      <img :src="`/images/${experience.logo}`" alt="mobile" class="h-24 mb-10" />
+      <div>
+        <h1 class="text-3xl text-gray-700">{{ experience.job }}</h1>
+        <h4 class="text-gray-600 text-base mb-10">{{ experience.dates }}</h4>
+        <div class="text-lg text-gray-700 mb-10">
+          <nuxt-content :document="experience" />
+        </div>
+        <div>
+        <div class="flex flex-row mb-5">
+          <img
+            src="~/assets/icons/code.svg"
+            alt="Right arrow bullet point"
+            class="mr-3"
+          />
+          <h3 class="text-xl text-gray-700">Stack :</h3>
+        </div>
+        <div class="flex flex-row flex-wrap">
+          <span
+            v-for="tool of experience.tools"
+            :key="tool"
+            class="text-lg text-gray-700 mr-5"
+          >
+            {{ tool }}
+          </span>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div
+      class="
+        xs:py-8 xs:px-8
+        lg:py-40 lg:w-1/2
+        xs:w-full
+        h-full
+        overflow-y-scroll
+        mr-20
+      "
+    >
+      <div class="flex flex-row mb-5">
+        <img
+          src="~/assets/icons/code.svg"
+          alt="Right arrow bullet point"
+          class="mr-3"
+        />
+        <h3 class="text-xl text-gray-700">Sujets traîtés :</h3>
+      </div>
+
+      <ul class="text-lg sm:text-xl space-y-6 mb-10">
+        <li v-for="subject of experience.subjects" :key="subject">
+          <div class="flex flex-row">
+            <img
+              src="~/assets/icons/right-arrow.svg"
+              alt="Right arrow bullet point"
+              class="mr-3"
+            />
+            <div class="text-base text-gray-600">
+              {{ subject }}
+            </div>
+          </div>
+        </li>
+      </ul>
+
       <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
   </article>

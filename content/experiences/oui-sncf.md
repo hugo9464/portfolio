@@ -2,19 +2,24 @@
 title: Oui.sncf
 dates: Novembre 2017 - Décembre 2018
 job: Développeur Backend
-img: valentine_background.png
 logo: oui_sncf.svg
-alt: Page expèrience leboncoin
-author: 
-  name: Choi
-  bio: All about Choi and where he works and what he does
-  img: https://images.unsplash.com/photo-1534471770828-9bde524ee634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
-tags: 
-  - nuxtjs
-  - web development
+alt: Page expèrience oui.sncf
+tools: 
+  - Java 8
+  - Spring
+  - Maven
+  - Cucumber
+  - Groovy
+  - Gherkin
+  - Jenkins
+  - Rundeck
+subjects: 
+  - Développement de User Stories
+  - Développement de tests d'API en cucumber/groovy
+  - Exécution et analyse de tests de non régression (+ de 3000 tests)
+  - Participation à l'évolution du framework de tests
 ---
-## what do you know and what do we not know
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Au sein d'une équipe d'une vingtaine de personnes, j'ai participé au développement de nouvelles fonctionnalités du Portail d'Accès aux Offres (PAO), une API permettant d'uniformiser l'intégration entre les partenaires SNCF et ses clients.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+En plus de mon rôle de développeur, j'ai activement participé à l'évolution du framework de tests interne au projet ainsi qu'aux processus de tests.

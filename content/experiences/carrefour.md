@@ -2,19 +2,25 @@
 title: Carrefour
 dates: Septembre 2014 - Novembre 2017
 job: Consultant Tests
-img: valentine_background.png
 logo: carrefour.svg
-alt: Page expèrience leboncoin
-author: 
-  name: Choi
-  bio: All about Choi and where he works and what he does
-  img: https://images.unsplash.com/photo-1534471770828-9bde524ee634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
-tags: 
-  - nuxtjs
-  - web development
+tools: 
+  - C#
+  - Ranorex
+  - SoapUI
+  - Groovy
+  - Jenkins
+  - SQL
+  - XML
+  - XSD
+  - Ranorex
+  - HP ALM
+subjects:
+  - Estimation de la faisabilité de l'automatisation.
+  - Création des scénarios sous SoapUI (pour les webservices) et sous Ranorex (pour l'IHM)
+  - Administration d'un serveur Jenkins pour exécuter les tests quotidiennement et notifier les différents acteurs de l'état de leurs applications.
+  - Création d'un framework Ranorex propre à Carrefour pour faciliter l'usage de Ranorex par une tierce personne et customisé les actions et reportings des tests.
 ---
-## what do you know and what do we not know
+Consultant automatisation des tests pour le compte de Beijaflore, je suis principalement intervenu au sein du pôle e-commerce alimentaire de Carrefour.
+Intervenant sur toutes les applications du domaine : ooshop web/mobile, drive web/mobile, drive backoffice.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Dans une équipe transverse de trois personnes, j'ai participé à la mise en place d'une plateforme d'automatisation des tests. Allant de la création des tests à la formation des utilisateurs de la plateforme (chefs de projet, testeurs manuels, etc...) 
