@@ -6,110 +6,121 @@
       <img
         :src="require(`~/assets/img/${project.img}`)"
         :alt="project.alt"
-        class="absolute h-full w-full object-cover"
+        class="absolute w-full object-cover"
       />
-      <div class="overlay"></div>
-      <!-- <div class="absolute top-32 left-32 text-white"> -->
-        <!-- <NuxtLink to="/"><Logo /></NuxtLink> -->
-        <!-- <div class="mt-16 -mb-3 flex uppercase text-sm">
-          <p class="mr-3">
-            {{ formatDate(project.updatedAt) }}
-          </p>
-          <span class="mr-3">•</span>
-          <p>{{ project.author.name }}</p>
-        </div> -->
-        <!-- <h1 class="text-6xl font-bold">{{ project.title }}</h1> -->
-        <!-- <span v-for="(tag, id) in project.tags" :key="id">
-          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
-            <span
-              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-            >
-              {{ tags[tag].name }}
-            </span>
-          </NuxtLink>
-        </span> -->
-      <!-- </div> -->
-      <div class="flex absolute top-3rem right-3rem">
-        <NuxtLink
-          to="/"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          All projects
-        </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
-        <AppSearchInput />
-      </div>
     </div>
     <div
-      class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
+      class="
+        relative
+        xs:py-8 xs:px-8
+        lg:px-16
+        xs:w-full
+        h-full
+        overflow-y-scroll
+        post-right
+        custom-scroll
+        lg:w-1/2
+      "
     >
-      <h1 class="font-bold text-4xl">{{ project.title }}</h1>
-      <p>{{ project.description }}</p>
-      <p class="pb-4">Post last updated: {{ formatDate(project.updatedAt) }}</p>
-      <!-- table of contents -->
-      <nav class="pb-6">
-        <ul>
-          <li
-            v-for="link of project.toc"
-            :key="link.id"
-            :class="{
-              'font-semibold': link.depth === 2
-            }"
+      <div>
+        <h1 class="text-3xl text-gray-700 mb-5">{{ project.title }}</h1>
+        <h4 class="text-gray-600 text-xl mb-5">{{ project.description }}</h4>
+
+        <div class="flex flex-row justify-around mb-10">
+          <a
+            :href="project.link"
+            target="_blank"
+            class="flex flex-row items-center"
           >
-            <nuxtLink
-              :to="`#${link.id}`"
-              class="hover:underline"
-              :class="{
-                'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3
-              }"
-              >{{ link.text }}</nuxtLink
+            <img
+              src="~/assets/img/external-link.svg"
+              alt="github logo"
+              class="h-10 mr-3"
+            />
+            <span class="text-lg text-gray-700"> Découvrir </span>
+          </a>
+          <a
+            :href="project.github"
+            target="_blank"
+            class="flex flex-row items-center"
+          >
+            <img
+              src="~/assets/img/github.svg"
+              alt="github logo"
+              class="h-10 mr-3"
+            />
+            <span class="text-lg text-gray-700"> Repo Github </span>
+          </a>
+        </div>
+        <div class="text-lg text-gray-700 mb-10">
+          <nuxt-content :document="project" />
+        </div>
+        <li v-for="subject of project.subjects" :key="subject">
+          <ul class="flex flex-row items-center mb-3">
+            <img
+              src="~/assets/icons/bullet.svg"
+              alt="Bullet point"
+              class="mr-3 h-3"
+            />
+            <div class="text-base text-gray-600">
+              {{ subject }}
+            </div>
+          </ul>
+        </li>
+        <div>
+          <div class="flex flex-row mt-10 mb-5">
+            <img
+              src="~/assets/icons/code.svg"
+              alt="Code icon"
+              class="mr-3"
+            />
+            <h3 class="text-xl text-gray-700">Stack :</h3>
+          </div>
+          <div class="flex flex-row flex-wrap">
+            <div
+              v-for="tool of project.tools"
+              :key="tool"
+              class="flex flex-col items-center mr-5"
             >
-          </li>
-        </ul>
-      </nav>
-      <!-- content from markdown -->
-      <nuxt-content :document="project" />
-      <!-- content author component -->
-      <author :author="project.author" />
-      <!-- prevNext component -->
-      <PrevNext :prev="prev" :next="next" class="mt-8" />
+              <img :src="`/images/${tool.logo}`" alt="mobile" class="h-10" />
+              <span class="text-lg text-gray-700">
+                {{ tool.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </article>
 </template>
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const project = await $content('projects', params.slug).fetch()
+    const project = await $content("projects", params.slug).fetch();
     // const tagsList = await $content('tags')
     //   .only(['name', 'slug'])
     //   .where({ name: { $containsAny: project.tags } })
     //   .fetch()
     // const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })))
-    const [prev, next] = await $content('projects')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+    const [prev, next] = await $content("projects")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
       .surround(params.slug)
-      .fetch()
+      .fetch();
     return {
       project,
       // tags,
       prev,
-      next
-    }
+      next,
+    };
   },
   methods: {
     formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    }
-  }
-}
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
+  },
+};
 </script>
 <style>
 .nuxt-content p {
@@ -128,5 +139,8 @@ export default {
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
+}
+li {
+  list-style-type: none;
 }
 </style>

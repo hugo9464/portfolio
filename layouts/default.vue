@@ -10,6 +10,10 @@
           :class="isOpen ? 'block': 'hidden'"
         >
           <li>
+            <a v-if="$route.path === '/'" href="/" class="text-copy-primary hover:text-gray-600">Accueil</a>
+            <nuxt-link v-else to="/" class="text-copy-primary hover:text-gray-600">Accueil</nuxt-link>
+          </li>
+          <li>
             <a v-if="$route.path === '/'" href="/#journey" v-scroll-to="'#journey'" class="text-copy-primary hover:text-gray-600">Parcours</a>
             <nuxt-link v-else to="/#journey" v-scroll-to="'/#journey'" class="text-copy-primary hover:text-gray-600">Parcours</nuxt-link>
           </li>
