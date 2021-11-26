@@ -56,7 +56,10 @@
         <ul class="text-lg sm:text-xl space-y-6">
           <li v-for="experience of experiences" :key="experience.slug">
             <NuxtLink
-              :to="{ name: 'experiences-slug', params: { slug: experience.slug } }"
+              :to="{
+                name: 'experiences-slug',
+                params: { slug: experience.slug },
+              }"
             >
               <div class="flex">
                 <img
@@ -66,7 +69,9 @@
                 />
                 <div class="flex flex-col justify-center">
                   <h3>{{ experience.title }}</h3>
-                  <h4 class="text-gray-600 text-base">{{ experience.dates }}</h4>
+                  <h4 class="text-gray-600 text-base">
+                    {{ experience.dates }}
+                  </h4>
                   <div class="text-lg text-gray-700">
                     {{ experience.job }}
                   </div>
@@ -102,7 +107,7 @@
                 <img
                   :src="`/images/${project.logo}`"
                   alt="mobile"
-                  class="h- w-11 flex-no-shrink fill-current logo mr-5"
+                  class="w-11 flex-no-shrink fill-current logo mr-5"
                 />
                 <div class="flex flex-col justify-center">
                   <h3>{{ project.title }}</h3>
@@ -124,22 +129,28 @@
       >
         <h2 class="font-bold mb-6" id="hobbies">Mes loisirs :</h2>
 
-        <div
-          class="flex flex-col sm:flex-row justify-between items-center mb-16"
-        >
-          <div>
-            <img
-              src="~assets/img/avatar.jpg"
-              alt="avatar"
-              class="w-32 h-32 rounded-full mb-8 lg:mb-0"
-            />
-          </div>
-          <div class="flex-1 text-lg sm:text-xl ml-6">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae
-            architecto minus molestias iusto ducimus fuga quo quia libero
-            dignissimos, fugiat modi assumenda debitis laboriosam.
-          </div>
-        </div>
+        <ul class="text-lg sm:text-xl space-y-6">
+          <li v-for="hobby of hobbies" :key="hobby.slug">
+            <div class="flex">
+              <div class="flex flex-row justify-center">
+                <img
+                  :src="`/images/${hobby.icon}`"
+                  alt="logo hobby"
+                  class="flex-no-shrink fill-current logo mr-5"
+                />
+                <v-icon large color="green darken-2"> mdi-domain </v-icon>
+                <div class="flex flex-col">
+                  <div v-for="item of hobby.items" :key="item">
+                    <span class="text-xl text-gray-700">{{ item.name }}</span>
+                    <span class="text-lg text-gray-600">{{
+                      item.description
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
       <!-- end get-to-know me -->
     </div>
@@ -159,9 +170,14 @@ export default {
       .sortBy("createdAt", "asc")
       .fetch();
 
+    const hobbies = await $content("hobbies")
+      .sortBy("createdAt", "asc")
+      .fetch();
+
     return {
       projects,
       experiences,
+      hobbies,
     };
   },
 };
