@@ -12,7 +12,6 @@
       "
     >
       <div class="text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left">
-        <!-- <div class="leading-tight">Hugo Faye</div> -->
         <div class="text-green-700 leading-tight">
           QA Ingénieur &amp; Développeur Front
         </div>
@@ -38,14 +37,6 @@
         (Web et Mobile), tout en gardant une forte appétence pour la qualité et
         son amélioration perpétuelle dans les projets sur lesquels j'interviens.
       </p>
-      <!-- <div class="flex justify-between items-center py-6">
-        <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
-          <img src="~assets/img/mind_map.svg" alt="browser" />
-        </div>
-        <div class="w-1/2 px-8 hidden sm:flex justify-end">
-          <img src="~assets/img/code_review.svg" alt="mobile" />
-        </div>
-      </div> -->
     </div>
 
     <div class="overflow-x-hidden">
