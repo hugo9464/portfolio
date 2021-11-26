@@ -8,7 +8,7 @@ img:
   - zede/calendar2.jpeg
 logo: react-native.svg
 github: https://github.com/hugo9464/zede-react
-alt: Projet Zède
+alt: Screenshot du projet Zède
 subjects:
   - Design UX
   - Travail en collaboration avec un webdesigner et un développeur backend
