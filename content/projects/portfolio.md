@@ -1,7 +1,8 @@
 ---
 title: Portfolio
 description: Développement de mon portfolio.
-img: portfolio.png
+img: 
+  - portfolio.png
 logo: nuxt.svg
 link: /
 github: https://github.com/hugo9464/portfolio

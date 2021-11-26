@@ -1,7 +1,8 @@
 ---
 title: Valentine H Despointes
 description: Création d'un site e-commerce dédié à la vente d'articles de maroquinerie.
-img: valentine.png
+img: 
+  - valentine.png
 logo: shopify.svg
 link: https://valentinehdespointes.com/
 github: https://github.com/hugo9464/shopify-valentine-theme

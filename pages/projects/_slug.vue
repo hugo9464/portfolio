@@ -4,10 +4,24 @@
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
       <img
+        v-if="project.img.length == 1"
         :src="require(`~/assets/img/${project.img}`)"
         :alt="project.alt"
         class="absolute w-full object-cover"
       />
+      <div v-else class="grid grid-cols-2 gap-4">
+        <div 
+        v-for="img of project.img" :key="img"
+        class="flex w-full flex-row justify-center">
+          <img
+            
+            :src="require(`~/assets/img/${img}`)"
+            :alt="project.alt"
+            class="w-1/2"
+          />
+        </div>
+          
+      </div>
     </div>
     <div
       class="
@@ -28,6 +42,7 @@
 
         <div class="flex flex-row justify-around mb-10">
           <a
+            v-if="project.link"
             :href="project.link"
             target="_blank"
             class="flex flex-row items-center"
@@ -69,11 +84,7 @@
         </li>
         <div>
           <div class="flex flex-row mt-10 mb-5">
-            <img
-              src="~/assets/icons/code.svg"
-              alt="Code icon"
-              class="mr-3"
-            />
+            <img src="~/assets/icons/code.svg" alt="Code icon" class="mr-3" />
             <h3 class="text-xl text-gray-700">Stack :</h3>
           </div>
           <div class="flex flex-row flex-wrap">

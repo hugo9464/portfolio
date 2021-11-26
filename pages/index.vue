@@ -111,7 +111,7 @@
                 <img
                   :src="`/images/${project.logo}`"
                   alt="mobile"
-                  class="h-11 w-11 flex-no-shrink fill-current logo mr-5"
+                  class="h- w-11 flex-no-shrink fill-current logo mr-5"
                 />
                 <div class="flex flex-col justify-center">
                   <h3>{{ project.title }}</h3>

@@ -1,7 +1,8 @@
 ---
 title: Aquiu
 description: Design et développement d'un module de click and collect pour l'épicerie Aquiu à Pau.
-img: valentine_background.png
+img: 
+  - valentine_background.png
 logo: angular.svg
 alt: Projet Valentine H Despointes
 author: 
