@@ -61,7 +61,7 @@
                 params: { slug: experience.slug },
               }"
             >
-              <div class="flex">
+              <div class="flex justify-between shadow px-5 py-2">
                 <img
                   :src="`/images/${experience.logo}`"
                   alt="mobile"
@@ -76,6 +76,11 @@
                     {{ experience.job }}
                   </div>
                 </div>
+                <img
+                  src="~/assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="ml-auto w-8"
+                />
               </div>
             </NuxtLink>
           </li>
@@ -103,7 +108,7 @@
             <NuxtLink
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
             >
-              <div class="flex">
+              <div class="flex justify-between shadow px-5 py-2">
                 <img
                   :src="`/images/${project.logo}`"
                   alt="mobile"
@@ -115,6 +120,11 @@
                     {{ project.description }}
                   </div>
                 </div>
+                <img
+                  src="~/assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="ml-auto w-8"
+                />
               </div>
             </NuxtLink>
           </li>
