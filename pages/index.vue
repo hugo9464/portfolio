@@ -136,15 +136,11 @@
                 <img
                   :src="`/images/${hobby.icon}`"
                   alt="logo hobby"
-                  class="flex-no-shrink fill-current logo mr-5"
+                  class="mr-10 logo"
                 />
-                <v-icon large color="green darken-2"> mdi-domain </v-icon>
-                <div class="flex flex-col">
+                <div class="flex flex-col justify-center">
                   <div v-for="item of hobby.items" :key="item">
-                    <span class="text-xl text-gray-700">{{ item.name }}</span>
-                    <span class="text-lg text-gray-600">{{
-                      item.description
-                    }}</span>
+                    <span class="text-xl text-gray-700">{{ item }}</span>
                   </div>
                 </div>
               </div>
