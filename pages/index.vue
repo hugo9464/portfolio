@@ -32,7 +32,7 @@
         depuis plus de 7 ans dans le monde de la qualité.
       </p>
       <p class="text-lg sm:text-xl">
-        Spécialisé en automatisation de tests et débeloppement d'outils de
+        Spécialisé en automatisation de tests et développement d'outils de
         tests, je cherche à présent à m'orienter vers le développement Front
         (Web et Mobile), tout en gardant une forte appétence pour la qualité et
         son amélioration perpétuelle dans les projets sur lesquels j'interviens.
