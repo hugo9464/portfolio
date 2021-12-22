@@ -2,25 +2,32 @@
   <article
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
-    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
+    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full">
       <img
         v-if="project.img.length == 1"
         :src="require(`~/assets/img/${project.img}`)"
         :alt="project.alt"
         class="absolute w-full object-cover"
       />
-      <div v-else class="grid grid-cols-2 gap-4">
-        <div 
-        v-for="img of project.img" :key="img"
-        class="flex w-full flex-row justify-center">
+      <div v-else>
+        <carousel
+          :autoplay="true"
+          :loop="true"
+          :perPage=1
+          :centerMOde="true"
+          :navigationEnabled="true"
+          class="w-2/5 mx-auto"
+        >
+          <slide
+          v-for="img of project.img"
+          :key="img"
+        >
           <img
-            
             :src="require(`~/assets/img/${img}`)"
             :alt="project.alt"
-            class="w-1/2"
           />
-        </div>
-          
+        </slide>
+        </carousel>
       </div>
     </div>
     <div

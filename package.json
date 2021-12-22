@@ -16,6 +16,7 @@
     "date-fns": "^2.15.0",
     "nuxt": "^2.14.0",
     "prism-themes": "^1.4.0",
+    "vue-carousel": "^0.18.0",
     "vue-scrollto": "^2.18.2",
     "vuetify": "^2.4.0"
   },
