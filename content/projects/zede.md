@@ -6,20 +6,21 @@ img:
   - zede/weighing.jpeg
   - zede/calendar1.jpeg
   - zede/calendar2.jpeg
-logo: react-native.svg
-github: https://github.com/hugo9464/zede-react
+logo: flutter.svg
+github: https://github.com/hugo9464/zede-flutter
 alt: Screenshot du projet Zède
 subjects:
   - Design UX
-  - Travail en collaboration avec un webdesigner et un développeur backend
-  - Développement de l'application en react-native
+  - Travail en collaboration avec une graphiste
+  - Développement de l'application en flutter
+  - Développement du backend en NodeJS
 tools:
-    - name: React Native
-      logo: react-native.svg
-    - name: Expo
-      logo: expo.svg
-    - name: Redux
-      logo: redux.svg
+    - name: Flutter
+      logo: flutter.svg
+    - name: NodeJS
+      logo: nodejs.svg
+    - name: MongoDB
+      logo: mpongo.svg
 ---
 
 Zède est une application mobile destinée à l'organisation de défis zéro déchet.

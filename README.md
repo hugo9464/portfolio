@@ -1,13 +1,12 @@
 # Portfolio Hugo Faye
 
-My portfolio is based on the starter theme for Nuxt.js static sites [nuxt-portfolio-starter](https://github.com/drehimself/nuxt-portfolio-starter).
+Visit the [live portfolio !](https://hugofaye.netlify.app/)
 
 ## Stack
 
 - Vue.js
 - Nuxt.js
 - [Tailwind CSS v1](https://tailwindcss.com)
-- Scroll to sections using [vue-scrollto](https://github.com/rigor789/vue-scrollto)
 - Nuxt content module
 
 ## Installation
