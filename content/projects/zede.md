@@ -20,7 +20,7 @@ tools:
     - name: NodeJS
       logo: nodejs.svg
     - name: MongoDB
-      logo: mpongo.svg
+      logo: mongo.svg
 ---
 
 Zède est une application mobile destinée à l'organisation de défis zéro déchet.
